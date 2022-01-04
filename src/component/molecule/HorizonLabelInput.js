@@ -13,10 +13,10 @@ const HorizontalLabelInput = (props) => {
         <Label value=":"/>
       </DivColon>
       <DivInput>
-        <Input onChange={props.onChange}></Input>
+        <Input onChange={props.onChange} inputRef={props.inputRef}></Input>
       </DivInput>
     </HorizonForm>
-  );  
+  );
 };
 
 const borderOption = `1px solid #000000`;

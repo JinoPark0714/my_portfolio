@@ -1,11 +1,9 @@
 import React from 'react';
-import Header from './component/page/Header';
-
+import MainPage from './component/page/Mainpage';
 const App = () => {
-  
   return (
     <div>
-      <Header/>
+      <MainPage/>
     </div>
   );
 }

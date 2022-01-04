@@ -1,6 +1,11 @@
 import React from 'react';
 import styled, {css}from 'styled-components';
 
+/**
+ * 
+ * @param {object} props - onClick,color,value 
+ * @returns 
+ */
 const Button = (props) => {
   return (
     <NormalButton 

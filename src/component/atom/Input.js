@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Input = (props) => {
   return (
-    <InputBox onChange={props.onChange}></InputBox>
+    <InputBox onChange={props.onChange} ref={props.inputRef}></InputBox>
   );
 };
 
@@ -15,5 +15,9 @@ const InputBox = styled.input`
   text-align:center;
   background: white;
 `;
+
+InputBox.defaultProps = {
+  inputRef : null
+};
 
 export default Input;
