@@ -8,17 +8,21 @@ const HorizonImageLabel = (props) => {
         <Img src={props.sourcePath}/>
       </ImgDiv>
       <TextDiv>
-        <div>{props.title}</div>
-        <div>{props.text}</div>
-        <div>{props.sub}</div>
+        <TitleDiv>{props.title}</TitleDiv>
+        <DescriptionDiv>{props.text}</DescriptionDiv>
       </TextDiv>
     </Outer>
   )
 }
 
-const Img = styled.img`
-  width: 50px;
-  height: 50px;
+const Outer = styled.div`
+  width: auto;
+  height: auto;
+  /* border: 1px solid #000; */
+  flex-direction:row;
+  display: flex;
+  justify-content:center;
+  align-items:center;
 `;
 
 const ImgDiv = styled.div`
@@ -37,17 +41,24 @@ const TextDiv = styled.div`
   flex-direction:column;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items:left;
 `;
 
-const Outer = styled.div`
-  width: auto;
-  height: auto;
-  /* border: 1px solid #000; */
-  flex-direction:row;
-  display: flex;
-  justify-content:center;
-  align-items:center;
+const Img = styled.img`
+  width: 50px;
+  height: 50px;
 `;
+
+const TitleDiv = styled.div`
+  width: 100px;
+  font-size: 13pt;
+  font-weight: 900;
+`;
+
+const DescriptionDiv = styled.div`
+  width: auto;
+  font-size: 11pt;
+`;
+
 
 export default HorizonImageLabel;

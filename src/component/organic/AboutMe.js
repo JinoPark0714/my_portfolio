@@ -3,16 +3,19 @@ import styled from 'styled-components';
 import HorizonImageLabel from '../molecule/HorizonImageLabel';
 
 const AboutMe = () => {
-  const telephone = "icon/telephone.png";
-  const user = "icon/user.png";
-  const address = "icon/address.png";
-  const birthday = "icon/birthday.png";
-  const mail = "icon/mail.png";
-  const school = "icon/school.png";
+  const aboutmePath = process.env.REACT_APP_ABOUTME_PATH;
+  const telephone = `${aboutmePath}/telephone.png`;
+  const user = `${aboutmePath}/user.png`;
+  const address = `${aboutmePath}/address.png`;
+  const birthday = `${aboutmePath}/birthday.png`;
+  const mail = `${aboutmePath}/mail.png`;
+  const school = `${aboutmePath}/school.png`;
   return(
     <Outer>
       <Inner>
-        <h2>About Me</h2>
+        <Title>
+          About Me
+        </Title>
       </Inner>
       <Inner>
         <HorizonImageLabel
@@ -40,15 +43,25 @@ const AboutMe = () => {
         <HorizonImageLabel
           sourcePath={school}
           title="학력"
-          text="동서대학교(컴퓨터공학부)"/>
+          text="동서대학교&nbsp;(컴퓨터공학부)"/>
       </Inner>
     </Outer>
   );
 }
 
 const Outer = styled.div`
+  width: 900px;
+  height: auto;
   flex-direction:column;
   display: flex;
+  margin: 25px;
+`;
+
+const Title = styled.div`
+  height: 100px;
+  text-align:center;
+  font-size: 25pt;
+  font-weight: 700;
 `;
 
 const Inner = styled.div`

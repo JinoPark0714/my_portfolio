@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import HorizonCategory from '../molecule/HorizonCategory';
-import HeaderService from './service/Header';
 
 const Header = () => {
-  const headerService = HeaderService;
   // skill 클릭
   const onClickSkill = () => {
     alert("skill click");
